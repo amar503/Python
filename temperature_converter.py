@@ -5,7 +5,7 @@ def c_to_f(c):
     else:
         f = c* 9/5 + 32
         return f
-for t in temperatures:
-    with open("output_ctof.txt","a") as myfile:
-         myfile.write(str(c_to_f(t)))
-         myfile.write("\n")
+    with open("output_ctof.txt","w") as myfile:
+         for t in temperatures:
+             myfile.write(str(c_to_f(t)))
+             myfile.write("\n")
